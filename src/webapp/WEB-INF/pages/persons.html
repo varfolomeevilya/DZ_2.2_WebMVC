@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список людей</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tablePerson">
+            <table>
+                <thead>
+                <tr>
+<!--                    <td width="15%">№</td>-->
+                    <td width="35%">Имя</td>
+                    <td width="29%">Фамилия</td>
+                    <td width="25%">Зарплата</td>
+
+                </tr>
+                </thead>
+                <tbody th:each=" el : ${persons}">
+                <tr>
+<!--                    <td th:text="${}"></td>-->
+                     <td th:text="${el.name}"></td>
+                    <td th:text="${el.surname}"></td>
+                    <td th:text="${el.salary}"></td>
+                </tr>
+                </tbody>
+            </table><br><br>
+            <a href="/company/add-person">
+                <button>Добавить людей</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
