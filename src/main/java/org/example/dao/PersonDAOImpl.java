@@ -8,12 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public class PersonDAOImpl implements PersonDAO{
-
-    private final List<Person> persons;
-
-    public PersonDAOImpl(List<Person> persons) {
-        this.persons = persons;
-    }
+    @Autowired
+    private List<Person> persons;
 
     @Override
     public void add(Person person){
@@ -21,7 +17,7 @@ public class PersonDAOImpl implements PersonDAO{
     }
 
     @Override
-    public List<Person> findAll(){
+    public List<Person>findAll(){
         return this.persons;
     }
 }

@@ -1,10 +1,13 @@
 package org.example.model;
 
-import lombok.Builder;
+
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-@Builder
+@Data
+@NoArgsConstructor
 public class Person {
 
     private String name;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Список людей</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,14 +19,18 @@
                     <td width="25%">Зарплата</td>
 
                 </tr>
+
                 </thead>
+
                 <tbody th:each=" el : ${persons}">
+
                 <tr>
 <!--                    <td th:text="${}"></td>-->
                      <td th:text="${el.name}"></td>
                     <td th:text="${el.surname}"></td>
                     <td th:text="${el.salary}"></td>
                 </tr>
+
                 </tbody>
             </table><br><br>
             <a href="/company/add-person">
